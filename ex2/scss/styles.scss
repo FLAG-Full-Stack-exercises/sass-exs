@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+
+body {
+    background-color: $background_body;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 20vh;
+    display: flex;
+    gap: 50px;
+
+    .card {
+        @include cards;
+
+        &.white {
+        background-color: $background_cardwhite;
+        box-shadow: $size_boxshadow;
+        }
+
+        &.black {
+        color: $text_cardblack;
+        background-color: $background_cardblack;
+        box-shadow: $size_boxshadow $shadow_cardblack;
+        }
+    }
+
+    .textcontainer {
+        @include text-container;
+
+        h1 {
+            @include h1;
+        }
+        
+        p {
+            @include p;
+        }
+    }
+}
