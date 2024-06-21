@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+.container {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 40vh;
+    display: flex;
+    gap: 50px;
+
+    .button {
+        @include button;
+
+        &:disabled {
+            background-color: $background_disabled;
+        }
+
+        &.square {
+            border-radius: 4px;
+            background-color: $background_buttonsq;
+            text-align: left;
+            padding-left: 15px;
+
+            &:hover {
+                background-color: $background_buttonsq_hover;
+            }
+            &:active {
+                background-color: $background_buttonsq_active;
+            }
+        }
+
+        &.round {
+            border-radius: 20px;
+            background-color: $background_buttonrd;
+
+            &:hover {
+                background-color: $background_buttonrd_hover;
+            }
+            &:active {
+                background-color: $background_buttonrd_active;
+            }
+        }
+    }
+}

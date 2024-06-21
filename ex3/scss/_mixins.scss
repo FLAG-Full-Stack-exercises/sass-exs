@@ -1,0 +1,10 @@
+@mixin button {
+    width: 183px;
+    height: 39px;
+    color: $text_button;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}

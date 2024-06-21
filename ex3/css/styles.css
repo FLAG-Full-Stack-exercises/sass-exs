@@ -1,0 +1,45 @@
+/* Colors Button Square */
+/* Colors Button Round */
+/* Colors Global */
+.container {
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 40vh;
+  display: flex;
+  gap: 50px;
+}
+.container .button {
+  width: 183px;
+  height: 39px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container .button:disabled {
+  background-color: #D4D3D3;
+}
+.container .button.square {
+  border-radius: 4px;
+  background-color: #7749F8;
+  text-align: left;
+  padding-left: 15px;
+}
+.container .button.square:hover {
+  background-color: #EF5DA8;
+}
+.container .button.square:active {
+  background-color: #7879F1;
+}
+.container .button.round {
+  border-radius: 20px;
+  background-color: #082692;
+}
+.container .button.round:hover {
+  background-color: #0A6BDD;
+}
+.container .button.round:active {
+  background-color: #1D88C3;
+}/*# sourceMappingURL=styles.css.map */
