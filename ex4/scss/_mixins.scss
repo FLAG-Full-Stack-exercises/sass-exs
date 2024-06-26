@@ -1,0 +1,99 @@
+/* Light Mode */
+
+@mixin body {
+    background: $background_body;
+    width: $width_body;
+    height: $height_body;
+    min-width: $minsize;
+    min-height: $minsize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+@mixin app {
+    margin: auto;
+    width: $width_container;
+    height: $height_container;
+    border-radius: $radius_container;
+    box-shadow: $boxshadow_container;
+    display: flex;
+    overflow: hidden;
+}
+
+@mixin primarycolumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin primarycolumnleft {
+    width: 200px;
+    height: 390px;
+    background: $color_scheme1;
+}
+
+@mixin primarycolumnright {
+    width: 612px;
+    height: 390px;
+    background: $color_scheme2;
+}
+
+@mixin primarycolumnlefttextbox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin primarycolumnrightcontainer {
+    width: 612px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin primarycolumrightrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 580px;
+}
+
+@mixin search {
+    width: 209px;
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+    background-color: $color_scheme1;
+    color: grey;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: end;
+}
+
+@mixin row4 {
+    display: flex;
+    gap: 25px;
+    justify-content: end;
+    align-items: center;
+    width: 535px;
+}
+
+/* Dark Mode */
+
+@mixin primarycolumnleftdark {
+    width: 200px;
+    height: 390px;
+    background: $color_scheme3;
+}
+
+@mixin primarycolumnrightdark {
+    width: 612px;
+    height: 390px;
+    background: $color_scheme5;
+}

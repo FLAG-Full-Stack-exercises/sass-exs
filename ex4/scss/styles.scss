@@ -1,0 +1,175 @@
+@import "variables";
+@import "mixins";
+@import "cards";
+
+html, body {
+    @include body;
+
+    .container {
+        @include primarycolumns;
+        gap:$size_gap;
+
+        .app {
+            @include app;
+
+            .col {
+                @include primarycolumns;
+            
+                &.left {
+                    @include primarycolumnleft;
+            
+                    .textbox {
+                        @include primarycolumnlefttextbox;
+            
+                        h1, h3 {
+                            margin-bottom: $margin_textbox;
+                        }
+            
+                        h1 {
+                            font-size: $size_primarytemp;
+                        }
+                    }
+                }
+            
+                &.right {
+                    @include primarycolumnright;
+            
+                    .rightcontainer {
+                        @include primarycolumnrightcontainer;
+            
+                        .row1, .row2, .row3 {
+                            @include primarycolumrightrow;
+                            }
+                    
+                        .row1 {
+                            .search {
+                                @include search;
+                                }
+                            }
+            
+                        .row2 {
+                            padding-bottom: $padding_row2;
+            
+                            .boxbig {
+                                @include card;
+                                height: $height_boxbig;
+            
+                                .boxrow1 {
+                                    @include row1;
+            
+                                    p {
+                                        @include row1p;
+                                    }
+                                }
+            
+                                .boxrow2 {
+                                    @include boxrow2;
+                                    height: $height_card1;
+            
+                                    .boxrow2col1{
+                                        @include boxrow2col1;
+                                        height: $height_card1;
+            
+                                        img {
+                                            @include img;
+                                        }
+            
+                                    }
+            
+                                    .boxrow2col2{
+                                        @include boxrow2col2;
+                                        height: $height_card1;
+            
+                                        h3, p {
+                                            padding-right: $padding_h3p;
+                                        }
+            
+                                        p {
+                                            @include p;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        } 
+            
+                        .row3 {
+                            .boxsmall {
+                                @include card;
+                                height: $height_boxsmall;
+            
+                                .boxrow1 {
+                                    @include row1;
+            
+                                    p {
+                                        @include row1p;
+                                    }
+                                }
+            
+                                .boxrow2 {
+                                    @include boxrow2;
+                                    height: $height_card2;
+            
+                                    .boxrow2col1{
+                                        @include boxrow2col1;
+                                        height: $height_card2;
+            
+                                        img {
+                                            @include img;
+                                        }
+            
+                                    }
+            
+                                    .boxrow2col2{
+                                        @include boxrow2col2;
+                                        height: $height_card2;
+                                        padding-top: $padding_bowrow2col2;
+            
+                                        h3, p {
+                                            padding-right: $padding_h3p;
+                                        }
+            
+                                        p {
+                                            @include p;
+                                        }
+                                    }
+                                    
+                                }
+            
+                            }
+                        }
+            
+                        .row4 {
+                            @include row4;
+            
+                            .p1 {
+                                color: $color_selection;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.dark {
+                color: $color_scheme1;
+
+                .col{
+                    &.left{
+                        @include primarycolumnleftdark;
+                    }
+                    &.right{
+                        @include primarycolumnrightdark;
+
+                        .rightcontainer {
+                            .row2, .row3 {
+                                .boxbig, .boxsmall {
+                                    @include carddark;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
